@@ -65,7 +65,8 @@ const mapsQ=v=>encodeURIComponent(v.name==="Beech Tree Park"?`${v.lat},${v.lon}`
 const gmaps=v=>`https://www.google.com/maps/search/?api=1&query=${mapsQ(v)}`;
 const amaps=v=>`https://maps.apple.com/?q=${mapsQ(v)}`;
 // map
-const map=L.map("map",{scrollWheelZoom:false}).fitBounds(V.map(v=>[v.lat,v.lon]),{padding:[24,24]});
+const map=L.map("map",{scrollWheelZoom:false,zoomSnap:0,zoomDelta:0.5}).fitBounds(V.map(v=>[v.lat,v.lon]),{paddingTopLeft:[18,40],paddingBottomRight:[18,14]});
+const fit=()=>map.fitBounds(V.map(v=>[v.lat,v.lon]),{paddingTopLeft:[18,40],paddingBottomRight:[18,14]});let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(fit,150)});
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"© OpenStreetMap"}).addTo(map);
 const markers={};
 V.forEach(v=>{const m=L.marker([v.lat,v.lon],{icon:L.divIcon({className:"",html:`<div class="pin" style="background:${vc(v)}"><b>${v.n}</b></div>`,iconSize:[28,28],iconAnchor:[14,28],popupAnchor:[0,-26]})}).addTo(map);
