@@ -22,14 +22,14 @@ h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)
 .chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
-.card.dim{opacity:.38}
+.card.dim{display:none}
 .card .hd{display:flex;align-items:flex-start;gap:10px}
 .num{flex:none;width:28px;height:28px;border-radius:50%;background:var(--fg);color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center}
 .card .addr{font-weight:700;font-size:16px;line-height:1.2}
 .card .sub{color:var(--mut);font-size:13px}
 .acts{margin:2px 0 0;padding:0;list-style:none}
 .acts li{display:grid;grid-template-columns:6.4em 1fr;gap:8px;padding:4px 0;border-top:1px dashed var(--line);font-size:14px}
-.acts li.off{opacity:.4}.acts li.on{background:var(--acc2);margin:0 -6px;padding:4px 6px;border-radius:6px;border-top-color:transparent}
+.acts li.off{display:none}.acts li.on{background:var(--acc2);margin:0 -6px;padding:4px 6px;border-radius:6px;border-top-color:transparent}
 .acts .t{color:var(--mut);font-variant-numeric:tabular-nums;font-size:13px;padding-top:1px}
 .acts .g{color:var(--mut);font-size:12.5px;display:block}
 .links{display:flex;gap:8px;margin-top:4px}
@@ -42,7 +42,7 @@ footer{color:var(--mut);font-size:12.5px;margin-top:26px}
 .leaflet-popup-content{font:13.5px/1.4 system-ui;margin:10px 12px}
 .leaflet-popup-content a{color:var(--acc)}
 @media(max-width:600px){#map{height:52vh}.grid{grid-template-columns:1fr}}
-@media print{#map{height:480px}.chips{display:none}.card.dim{opacity:1}.acts li.off{opacity:1}}
+@media print{#map{height:480px}.chips{display:none}.card.dim{display:flex}.acts li.off{display:grid}}
 </style></head><body><div class="wrap">
 <header>
  <h1>Sharon <span>Porchfest</span> 2026</h1>
