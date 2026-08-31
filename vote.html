@@ -233,6 +233,11 @@ td .stance{
 .st-none{color:var(--flat)}
 td.none-cell{color:var(--flat);font-style:italic}
 
+/* incumbent context column: present for contrast, not a choice on this ballot */
+table.gov{min-width:920px}
+thead th.off{border-left:2px solid var(--rule-strong);color:var(--ink-2)}
+td.off{background:var(--paper);border-left:2px solid var(--rule-strong)}
+
 /* wide table variant for 7-way race */
 table.wide{min-width:1180px;font-size:.83rem}
 table.wide thead th:first-child{width:130px}
@@ -893,48 +898,55 @@ footer p{margin:0 0 .7em}
     <h2>Governor</h2>
   </div>
 
-  <p class="prose">The only contest on Sharon's Republican ballot, between two military veterans who ran companies before running for office. Mike Minogue, an Army infantry officer in Desert Storm and for nineteen years the chief executive of the Danvers medical device maker Abiomed, is making his first run for office; he won the MassGOP convention endorsement in a landslide in April and has declined to debate. Brian Shortsleeve, a Marine Corps veteran and the MBTA's first chief administrator under Governor Baker, has the Globe's endorsement and is running the more traditionally moderate campaign. Both voted for Donald Trump in 2024 and both have distanced themselves since; the Globe characterizes Minogue's earlier support as the more full-throated of the two.</p>
+  <p class="prose">The only contest on Sharon's Republican ballot, between two military veterans who ran companies before running for office. Mike Minogue, an Army infantry officer in Desert Storm and for nineteen years the chief executive of the Danvers medical device maker Abiomed, is making his first run for office; he won the MassGOP convention endorsement in a landslide in April and has declined to debate. Brian Shortsleeve, a Marine Corps veteran and the MBTA's first chief administrator under Governor Baker, has the Globe's endorsement and is running the more traditionally moderate campaign. Both voted for Donald Trump in 2024 and both have distanced themselves since; the Globe characterizes Minogue's earlier support as the more full-throated of the two. Maura Healey is unopposed on the Democratic ballot and is not a choice tomorrow, but she is the record both men are running against, so her column sits alongside theirs. That is the comparison Sharon actually decides in November.</p>
 
   <div class="scroller">
-    <table>
+    <table class="gov">
       <thead>
-        <tr><th scope="col">Issue</th><th scope="col">Mike Minogue</th><th scope="col">Brian Shortsleeve</th></tr>
+        <tr><th scope="col">Issue</th><th scope="col">Mike Minogue</th><th scope="col">Brian Shortsleeve</th><th scope="col" class="off">Maura Healey (D) &middot; not on this ballot</th></tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">MBTA Communities Act</th>
           <td data-c="Mike Minogue"><span class="stance st-against">Repeal</span>Cancels it as an unfunded mandate on cities and towns</td>
           <td data-c="Brian Shortsleeve"><span class="stance st-against">Repeal and replace</span>Substitute an incentive-based approach that rewards towns for adding housing</td>
+          <td class="off" data-c="Maura Healey (D), not on this ballot"><span class="stance st-for">Keep and enforce</span>The law requires 177 communities to zone for multifamily housing; her administration funds compliance through the MBTA Communities Catalyst Fund and the attorney general enforces it against holdouts. In February she dropped a plan to condition fire safety grants on compliance</td>
         </tr>
         <tr>
           <th scope="row">Net-zero emissions mandate</th>
           <td data-c="Mike Minogue"><span class="stance st-against">Repeal</span>Named it alongside the MBTA Communities Act at the convention</td>
           <td data-c="Brian Shortsleeve" class="none-cell"><span class="stance st-none">Not stated</span>Criticizes offshore wind as "the most expensive way to generate electricity" but no position found on repealing the mandate itself</td>
+          <td class="off" data-c="Maura Healey (D), not on this ballot"><span class="stance st-for">Keep it</span>Signed the 2024 climate law built around net zero by 2050, including longer offshore wind contracts and $400 million in clean energy capital. Her administration is reassessing interim targets against federal policy changes</td>
         </tr>
         <tr>
           <th scope="row">Sanctuary state status</th>
           <td data-c="Mike Minogue"><span class="stance st-against">End it</span>Would deport immigrants in the country illegally who are criminal, violent, gang-affiliated or dealing drugs, and end free Right to Shelter, Medicaid and benefits</td>
           <td data-c="Brian Shortsleeve"><span class="stance st-against">End it</span>Reform Right to Shelter, expand the federal SAVE verification program, increase state, local and federal law enforcement cooperation</td>
+          <td class="off" data-c="Maura Healey (D), not on this ballot"><span class="stance st-qual">Rejects the label, signed the limits</span>Says Massachusetts is not a sanctuary state. Signed the PROTECT Act on August 5, barring warrantless immigration arrests at courthouses, schools, child care centers and health facilities, while state prisons still notify ICE before releasing inmates with detainers. Separately tightened Right to Shelter</td>
         </tr>
         <tr>
           <th scope="row">Voter ID</th>
           <td data-c="Mike Minogue" class="none-cell"><span class="stance st-none">Not stated</span>No position found in the coverage reviewed</td>
           <td data-c="Brian Shortsleeve"><span class="stance st-for">Supports</span>Says he is the only candidate in the race raising it and that support crosses party lines</td>
+          <td class="off none-cell" data-c="Maura Healey (D), not on this ballot"><span class="stance st-none">Not stated</span>No position found in the coverage reviewed</td>
         </tr>
         <tr>
           <th scope="row">Taxes and utility costs</th>
           <td data-c="Mike Minogue"><span class="stance st-for">Cut both</span>"We have eight taxes and Massachusetts is working for some but not for all." Would lower energy costs using gas pipelines</td>
           <td data-c="Brian Shortsleeve"><span class="stance st-for">Cut both</span>Targets "state-mandated charges on your utility bill" and supports pipeline infrastructure for cheaper natural gas</td>
+          <td class="off" data-c="Maura Healey (D), not on this ballot"><span class="stance st-qual">Utility relief, no tax cut proposed</span>Put $180 million toward roughly a 15 percent cut in February and March electric bills, with a further 10 percent of electric and gas bills deferred and repaid later in the year, and has an energy affordability bill targeting delivery charges and utility spending</td>
         </tr>
         <tr>
           <th scope="row">Debating each other</th>
           <td data-c="Mike Minogue"><span class="stance st-against">Declined</span>Said he will not debate Shortsleeve</td>
           <td data-c="Brian Shortsleeve"><span class="stance st-for">Sought one</span>Has run ads against Minogue in the closing weeks</td>
+          <td class="off none-cell" data-c="Maura Healey (D), not on this ballot"><span class="stance st-none">Unopposed</span>No Democratic primary contest; she meets the winner in November</td>
         </tr>
         <tr>
           <th scope="row">Endorsements</th>
           <td data-c="Mike Minogue"><span class="stance st-for">MassGOP convention</span>Won the party endorsement in a landslide in April 2026</td>
           <td data-c="Brian Shortsleeve"><span class="stance st-for">Boston Globe</span>Endorsed as the candidate in the moderate tradition of recent Republican governors</td>
+          <td class="off none-cell" data-c="Maura Healey (D), not on this ballot"><span class="stance st-none">Unopposed</span>No primary endorsement contest on the Democratic side</td>
         </tr>
       </tbody>
     </table>
@@ -948,7 +960,7 @@ footer p{margin:0 0 .7em}
     </div>
   </div>
 
-  <div class="note"><b>Why this one lands locally.</b> Sharon is a commuter rail community covered by the MBTA Communities Act, which requires it to zone a district for multifamily housing. Both Republican candidates would remove that requirement, Minogue by repeal and Shortsleeve by replacing it with incentives. Governor Healey, unopposed on the Democratic ballot, has defended and enforced the law. The general election in November is where that choice actually gets made.</div>
+  <div class="note"><b>Why this one lands locally.</b> Sharon is a commuter rail community covered by the MBTA Communities Act, which requires it to zone a district for multifamily housing. Both Republican candidates would remove that requirement, Minogue by repeal and Shortsleeve by replacing it with incentives; Healey keeps it. The general election in November is where that choice actually gets made.</div>
 </section>
 
 <section id="uncontested">
@@ -1024,6 +1036,7 @@ footer p{margin:0 0 .7em}
       <li>NBC Boston, <a href="https://www.nbcboston.com/elections/ed-markey-seth-moulton-final-senate-primary-debate/4001662/">Markey and Moulton spar over healthcare and AI in final debate</a>; CNBC, <a href="https://www.cnbc.com/2026/08/27/ai-massachusetts-democratic-senate-primary-markey-moulton.html">AI bursts to the front of the primary</a></li>
       <li><a href="https://emersoncollegepolling.com/massachusetts-2026-poll-sen-markey-holds-commanding-lead/">Emerson College Polling</a>; <a href="https://scholars.unh.edu/survey_center_polls/989/">UNH Survey Center</a>; <a href="https://www.umass.edu/poll/about/reports/2026-08-massachusetts-public-opinion-poll-0">UMass Amherst / WCVB</a></li>
       <li>North Star Reporter, <a href="https://northstarreporter.com/2026/08/21/auchincloss-poulos-face-off-in-4th-district-democratic-primary/">Auchincloss, Poulos face off in 4th District Democratic primary</a>; Fig City News, <a href="https://www.figcitynews.com/2026/01/auchincloss-backs-national-guard-use-against-ice-we-refused-to-quarter-the-kings-troops/">Auchincloss backs National Guard use against ICE</a> and <a href="https://www.figcitynews.com/2026/08/voters-guide-to-sept-1-primary-elections/">Voters' guide to the Sept. 1 primary</a></li>
+      <li>Mass.gov, <a href="https://www.mass.gov/news/governor-healey-ag-campbell-celebrate-mbta-communities-momentum-to-lower-housing-costs">MBTA Communities momentum</a>; Planetizen, <a href="https://www.planetizen.com/news/2026/02/136967-massachusetts-governor-says-safety-funds-wont-be-tied-mbta-communities">safety funds not tied to compliance</a>; Western Mass News, <a href="https://www.westernmassnews.com/2026/08/05/healey-signs-bill-limiting-ice-activity-courthouses-schools-hospitals/">Healey signs the PROTECT Act</a>; WBUR, <a href="https://www.wbur.org/news/2026/01/22/healey-massachusetts-utility-bills-180m-cut">$180M toward winter utility bills</a></li>
       <li>WBUR, <a href="https://www.wbur.org/news/2026/04/25/minogue-gop-endorsement-massachusetts-governor">Minogue claims GOP endorsement</a>; NBC Boston, <a href="https://www.nbcboston.com/news/politics/at-issue/brian-shortsleeve-governor-massachusetts/3868637/">Shortsleeve on cost cutting, MBTA and immigration</a></li>
     </ul>
   </details>
